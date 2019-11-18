@@ -1,0 +1,108 @@
+/* 去除默认样式 */
+body,ul,li,a,button,input{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+ul{
+    list-style-type: none;
+}
+/* 
+*css定义超链接是要有先后顺序的。否则，在某些浏览器里面有可能会出现某个样式不起作用的bug。不能正确显示想要的效果。 
+*CSS属性的排列顺序: L-V-H-A 。 
+*L-V-H-A是link、visited、hover、active的简写。 
+ */
+a{  
+    color: black;
+    text-decoration: none;
+}
+/* a:link{
+    color: black;
+}
+a:visited{
+    color: #fff;
+} */
+
+/* 头部样式 */
+.head{
+    position: relative;
+    overflow: hidden;/*创建BFC 避免布局乱*/
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    font-weight: 900;
+    
+}
+/* 网站Logo */
+.head .head-bloglog{
+float: left;
+width: 200px;
+height: 100%;
+background-color: chocolate;
+}
+/* 列表栏目 */
+.head .head-navlist{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 53%;
+    min-width: 400px;
+    height: 100%; 
+    margin-left: 20px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+
+}
+.head .head-navlist ul{
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* color: #000; */
+    /* height: 80px; 
+    *可以对元素的margin设置百分数，百分数是相对于父元素的width计算
+    *translate 的百分比分别按照自身元素的宽高计算
+    * margin-top: 50%; 
+    *
+    * border: 1px solid rgb(62, 11, 155); */
+}
+.head .head-navlist ul li{
+float: left;
+width: 100px;
+min-width: 50px;
+margin-right: 3px;
+line-height: 50px;
+text-align: center;
+background-color: #eeeeee;
+border-bottom: 5px solid #adacac;
+
+}
+/* 右侧登录和搜索 */
+.head .head-login{
+    float: right;
+    min-width: 180px;
+    margin:30px 40px 0 0;
+}
+.head .head-login input{
+width: 200px;    
+height: 30px;
+
+}
+.head .head-login button{
+    width: 60px;
+    height: 30px;
+    vertical-align: bottom;
+}
+.head .head-login a{
+    color: #fff;
+}
+/* hover样式 */
+.head .head-navlist ul li:hover{
+border-bottom-color:chocolate ;
+}
+.head .head-navlist ul li:hover a{
+    color: chocolate;
+}
